@@ -34,3 +34,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+Comecei identificando os principais componentes da página. A Header traz a logo, o menu de navegação e as ações do usuário. O Banner exibe o "meme do dia". Em seguida, temos a seção de Explore Categorias, onde os memes são categorizados. Depois, temos o feed, onde os memes são exibidos. Por fim, temos a seção de Criaadores em destaque, onde os usuários mais ativos são listados.
+
+Para organizar tudo, coloquei os componentes na pasta src/components/, criando subpastas para cada um deles, com um arquivo index.jsx e um CSS Module correspondente. Isso ajudou bastante na manutenção do código.

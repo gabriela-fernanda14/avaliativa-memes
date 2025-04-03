@@ -1,6 +1,6 @@
-import styles from "./interactionBar.module.css";
+import styles from "./interaction.module.css";
 
-const InteractionBar = () => {
+const InteractionBar = ({meme}) => {
     return (
         <div className={styles.interactionBar}>
             <div className={styles.interactionButton}>

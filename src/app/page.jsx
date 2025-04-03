@@ -1,8 +1,8 @@
-import styles from "./page.module.css"; 
+import styles from "./page.module.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import HeroSection from "./components/heroSection";
-import MemeCard from "./components/memeCard";
+import Feed from "./components/feed";
 
 
 export default function Home() {
@@ -162,13 +162,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {/* COMPONENTE: Header */}
-      <Header/>
+      <Header />
       {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
           {/* COMPONENTE: HeroSection */}
-         <HeroSection/>
+          <HeroSection />
           {/* FIM COMPONENTE: HeroSection */}
 
           {/* COMPONENTE: CategoriesSection */}
@@ -189,31 +189,7 @@ export default function Home() {
           {/* FIM COMPONENTE: CategoriesSection */}
 
           {/* COMPONENTE: Feed */}
-          <section className={styles.feedSection}>
-            <div className={styles.feedHeader}>
-              <h2 className={styles.sectionTitle}>Memes Populares</h2>
-              <div className={styles.feedFilters}>
-                <button className={`${styles.filterButton} ${styles.active}`}>
-                  Recentes
-                </button>
-                <button className={styles.filterButton}>Mais curtidos</button>
-                <button className={styles.filterButton}>Mais comentados</button>
-              </div>
-            </div>
-
-            <div className={styles.feedGrid}>
-              {/* Aqui mapeamos os memes do array para criar múltiplos cards */}
-              
-                // COMPONENTE: MemeCard
-               <MemeCard/>
-                // FIM COMPONENTE: MemeCard
-             
-            </div>
-
-            <button className={styles.loadMoreButton}>
-              Carregar mais memes
-            </button>
-          </section>
+          <Feed />
           {/* FIM COMPONENTE: Feed */}
 
           {/* COMPONENTE: FeaturedMemesSection */}
@@ -370,7 +346,7 @@ export default function Home() {
       </div>
 
       {/* COMPONENTE: Footer */}
-     <Footer/>
+      <Footer />
       {/* FIM COMPONENTE: Footer */}
     </div>
   );

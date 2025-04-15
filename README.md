@@ -1,41 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Avaliativa Memes
 
-## Getting Started
+## Instruções de Instalação e Execução
 
-First, run the development server:
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/gabriela-fernanda14/avaliativa-memes.git
+    cd atividade-avaliativaMemes
+    ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Instale as dependências:
+    ```bash
+    npm install
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Execute o projeto:
+    ```bash
+    npm run dev
+    ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+4. Acesse a aplicação:  
+    Abra o navegador e acesse [http://localhost:3000](http://localhost:3000).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Componentes
 
-To learn more about Next.js, take a look at the following resources:
+- **Header**: Recebe `navItems` como props para renderizar os itens de navegação.
+- **Sidebar**: Recebe `upcomingEvents` como props para exibir eventos futuros e o componente EventCard.
+- **EventCard**: Recebe `event` como props para exibir informações do evento (título, data, participantes).
+- **Feed**: Recebe uma lista de memes como props para renderizar o feed.
+- **MemeCard**: Recebe informações de um meme (imagem, título, interações) como props.
+- **HeroSection**: Primeira sessão de destaque do projeto.
+- **CategoriesSection**: Recebe categorias como props para exibição.
+- **InteractionBar**: Recebe informações de interações (curtidas, comentários, compartilhamentos) como props.
+- **Footer**: Exibe informações fixas sobre o projeto, links úteis e redes sociais.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Decisões Tomadas
 
-## Deploy on Vercel
+- A componentização foi planejada seguindo a estrutura do site, começando pelos componentes principais e, em seguida, dividindo-os em partes menores.  
+- O uso de props foi adotado para tornar os componentes mais dinâmicos e reutilizáveis, o que facilita tanto a manutenção quanto a expansão do projeto.  
+- A pasta de componentes foi organizada dentro de `src`, mas separada de `app`, para uma melhor organização do código.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Desafios Enfrentados e Soluções Aplicadas
 
-
-Comecei identificando os principais componentes da página. A Header traz a logo, o menu de navegação e as ações do usuário. O Banner exibe o "meme do dia". Em seguida, temos a seção de Explore Categorias, onde os memes são categorizados. Depois, temos o feed, onde os memes são exibidos. Por fim, temos a seção de Criaadores em destaque, onde os usuários mais ativos são listados.
-
-Para organizar tudo, coloquei os componentes na pasta src/components/, criando subpastas para cada um deles, com um arquivo index.jsx e um CSS Module correspondente. Isso ajudou bastante na manutenção do código.
+- **Desafio**: Compreender e implementar a estrutura de componentes com props de forma eficiente, principalmente o da Header, onde um item do array precisava ter um style diferente.  
+  **Solução**: Utilizei Exemplos de projetos similares como referência e o Github Copilot (especificamente para o desafio citado).

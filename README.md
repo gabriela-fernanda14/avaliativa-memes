@@ -5,7 +5,7 @@
 1. Clone o repositório:
     ```bash
     git clone https://github.com/gabriela-fernanda14/avaliativa-memes.git
-    cd atividade-avaliativaMemes
+    cd avaliativa-memes
     ```
 
 2. Instale as dependências:
@@ -19,13 +19,13 @@
     ```
 
 4. Acesse a aplicação:  
-    Abra o navegador e acesse [http://localhost:3000](http://localhost:3000).
+    Abra o navegador e acesse [http://localhost:3000]
 
 ---
 
 ## Componentes
 
-- **Header**: Recebe `navItems` como props para renderizar os itens de navegação.
+- **Header**: Recebe a logo e `navItems` como props para renderizar os itens de navegação.
 - **Sidebar**: Recebe `upcomingEvents` como props para exibir eventos futuros e o componente EventCard.
 - **EventCard**: Recebe `event` como props para exibir informações do evento (título, data, participantes).
 - **Feed**: Recebe uma lista de memes como props para renderizar o feed.
@@ -33,7 +33,7 @@
 - **HeroSection**: Primeira sessão de destaque do projeto.
 - **CategoriesSection**: Recebe categorias como props para exibição.
 - **InteractionBar**: Recebe informações de interações (curtidas, comentários, compartilhamentos) como props.
-- **Footer**: Exibe informações fixas sobre o projeto, links úteis e redes sociais.
+- **Footer**: Exibe informações fixas sobre o projeto (logo com props), links úteis (props) e redes sociais.
 
 ---
 
@@ -48,4 +48,4 @@
 ## Desafios Enfrentados e Soluções Aplicadas
 
 - **Desafio**: Compreender e implementar a estrutura de componentes com props de forma eficiente, principalmente o da Header, onde um item do array precisava ter um style diferente.  
-  **Solução**: Utilizei Exemplos de projetos similares como referência e o Github Copilot (especificamente para o desafio citado).
+-  **Solução**: Utilizei Exemplos de projetos similares como referência e o Github Copilot (especificamente para o desafio citado).

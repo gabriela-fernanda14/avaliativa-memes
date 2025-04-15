@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import HeroSection from "./components/heroSection";
 import Feed from "./components/feed";
 import CategoriasSection from "./components/categoriasSection";
+import Sidebar from "./components/sidebar";
 
 
 export default function Home() {
@@ -79,7 +80,17 @@ export default function Home() {
   ];
 
   // Dados para o meme do dia (hero section)
-
+  const memeOfTheDay = {
+    id: 7,
+    title: "Meme do Dia: Quando seu código funciona de primeira",
+    description:
+      "Este momento raro que todos os desenvolvedores sonham em experimentar!",
+    image: "https://i.imgur.com/vldGJnz.jpg",
+    likes: 2452,
+    comments: 387,
+    author: "SuperCoder",
+    authorAvatar: "https://i.pravatar.cc/150?img=20",
+  };
 
   // Array de criadores em destaque
   const topCreators = [
@@ -162,23 +173,33 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+
       {/* COMPONENTE: Header */}
       <Header />
       {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
+
           {/* COMPONENTE: HeroSection */}
-          <HeroSection />
+
+          <HeroSection memeOfTheDay={memeOfTheDay} />
           {/* FIM COMPONENTE: HeroSection */}
+
 
           {/* COMPONENTE: CategoriesSection */}
 
-          {/* FIM COMPONENTE: CategoriesSection */}
-          <CategoriasSection />
+          <CategoriasSection categories={categories} />
+
+          {/* FIM DO COMPONENTE: CategoriesSection */}
+
+
           {/* COMPONENTE: Feed */}
-          <Feed />
+
+          <Feed memes={memes} />
+
           {/* FIM COMPONENTE: Feed */}
+          
 
           {/* COMPONENTE: FeaturedMemesSection */}
           <section className={styles.featuredSection}>
@@ -273,56 +294,7 @@ export default function Home() {
         </div>
 
         {/* COMPONENTE: Sidebar */}
-        <aside className={styles.sidebar}>
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>Eventos Próximos</h3>
-            {upcomingEvents.map((event) => (
-              // COMPONENTE: EventCard
-              
-              // FIM COMPONENTE: EventCard
-            ))}
-          </div>
-
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>MemeVerse Premium</h3>
-            <div className={styles.premiumCard}>
-              <h4 className={styles.premiumTitle}>
-                Desbloqueie recursos exclusivos!
-              </h4>
-              <ul className={styles.premiumFeatures}>
-                <li>Sem anúncios</li>
-                <li>Uploads ilimitados</li>
-                <li>Ferramentas de edição avançadas</li>
-                <li>Estatísticas detalhadas</li>
-              </ul>
-              <button className={styles.premiumButton}>
-                Experimentar Grátis
-              </button>
-            </div>
-          </div>
-
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>Tags Populares</h3>
-            <div className={styles.tagCloud}>
-              <span className={`${styles.tag} ${styles.tagLarge}`}>
-                #memeday
-              </span>
-              <span className={styles.tag}>#programação</span>
-              <span className={`${styles.tag} ${styles.tagMedium}`}>
-                #humor
-              </span>
-              <span className={styles.tag}>#escola</span>
-              <span className={`${styles.tag} ${styles.tagLarge}`}>
-                #trabalhoremoto
-              </span>
-              <span className={styles.tag}>#segundafeira</span>
-              <span className={`${styles.tag} ${styles.tagMedium}`}>
-                #games
-              </span>
-              <span className={styles.tag}>#nofilter</span>
-            </div>
-          </div>
-        </aside>
+        < Sidebar  upcomingEvents={upcomingEvents}/>
         {/* FIM COMPONENTE: Sidebar */}
       </div>
 

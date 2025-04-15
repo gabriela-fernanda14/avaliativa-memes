@@ -8,12 +8,12 @@ const Header = ({ logo, navItens }) => {
                 <span>🌟</span>
             </div>
             <nav className={styles.nav}> 
-                {navItens.map((navItem, home) => (
+                {navItens.map((navItem, item) => (
                     <a
                         key={navItem.id}
                         href="#"
                         // Adiciona a classe 'active' ao primeiro item do array de navegação (home === 0)
-                        className={home === 0 ? styles.active : undefined}
+                        className={item === 0 ? styles.active : undefined}
                     >
                         {navItem.title}
                     </a>

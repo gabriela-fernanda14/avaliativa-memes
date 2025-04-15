@@ -1,4 +1,5 @@
 import styles from "./sidebar.module.css"
+import EventCard from "../eventCard"
 
 const Sidebar = ({upcomingEvents}) => {
     return (
@@ -7,14 +8,7 @@ const Sidebar = ({upcomingEvents}) => {
           <h3 className={styles.sidebarTitle}>Eventos Próximos</h3>
           {upcomingEvents.map((event) => (
             // COMPONENTE: EventCard
-            <div key={event.id} className={styles.eventCard}>
-              <h4 className={styles.eventTitle}>{event.title}</h4>
-              <p className={styles.eventDate}>{event.date}</p>
-              <p className={styles.eventParticipants}>
-                {event.participants} participantes
-              </p>
-              <button className={styles.eventButton}>Participar</button>
-            </div>
+            <EventCard key={event.id} event={event} />
             // FIM COMPONENTE: EventCard
           ))}
         </div>

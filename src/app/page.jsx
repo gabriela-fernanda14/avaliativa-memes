@@ -6,7 +6,6 @@ import Feed from "./components/feed";
 import CategoriasSection from "./components/categoriasSection";
 import Sidebar from "./components/sidebar";
 
-
 export default function Home() {
 
   const logo = [
@@ -199,13 +198,11 @@ export default function Home() {
           <HeroSection memeOfTheDay={memeOfTheDay} />
           {/* FIM COMPONENTE: HeroSection */}
 
-
           {/* COMPONENTE: CategoriesSection */}
 
           <CategoriasSection categories={categories} />
 
           {/* FIM DO COMPONENTE: CategoriesSection */}
-
 
           {/* COMPONENTE: Feed */}
 
@@ -213,8 +210,6 @@ export default function Home() {
 
           {/* FIM COMPONENTE: Feed */}
           
-
-          {/* COMPONENTE: FeaturedMemesSection */}
           <section className={styles.featuredSection}>
             <h2 className={styles.sectionTitle}>Memes em Destaque</h2>
             <div className={styles.featuredGrid}>
@@ -247,9 +242,7 @@ export default function Home() {
               ))}
             </div>
           </section>
-          {/* FIM COMPONENTE: FeaturedMemesSection */}
 
-          {/* COMPONENTE: CreatorsSection */}
           <section className={styles.creatorsSection}>
             <h2 className={styles.sectionTitle}>Criadores em Destaque</h2>
             <div className={styles.creatorsGrid}>
@@ -274,9 +267,7 @@ export default function Home() {
               ))}
             </div>
           </section>
-          {/* FIM COMPONENTE: CreatorsSection */}
 
-          {/* COMPONENTE: NewsletterSection */}
           <section className={styles.newsletterSection}>
             <div className={styles.newsletterContent}>
               <h2 className={styles.newsletterTitle}>Fique por dentro!</h2>
@@ -303,7 +294,6 @@ export default function Home() {
               />
             </div>
           </section>
-          {/* FIM COMPONENTE: NewsletterSection */}
         </div>
 
         {/* COMPONENTE: Sidebar */}

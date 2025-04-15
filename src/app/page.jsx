@@ -8,6 +8,19 @@ import Sidebar from "./components/sidebar";
 
 
 export default function Home() {
+
+  const logo = [
+    {title: 'Memeverse',} 
+  ]
+  // Array de itens de navegação para o header
+  const navItens = [
+    { id: 1, title: "Home" },
+    { id: 2, title: "Trending" },
+    { id: 3, title: "Create" },
+    { id: 4, title: "Categories" },
+    { id: 5, title: "Profile" },
+  ];
+
   // Array de dados dos memes para serem passados como props
   const memes = [
     {
@@ -175,7 +188,7 @@ export default function Home() {
     <div className={styles.container}>
 
       {/* COMPONENTE: Header */}
-      <Header />
+      <Header logo={logo} navItens={navItens} />
       {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
@@ -299,7 +312,7 @@ export default function Home() {
       </div>
 
       {/* COMPONENTE: Footer */}
-      <Footer />
+      <Footer logo={logo} navItens={navItens}/>
       {/* FIM COMPONENTE: Footer */}
     </div>
   );

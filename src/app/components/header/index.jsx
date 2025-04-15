@@ -1,20 +1,23 @@
 import styles from "./header.module.css";
 
-const Header = () => {
+const Header = ({ logo, navItens }) => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <h1>MemeVerse</h1>
+                <h1>{logo[0].title}</h1>
                 <span>🌟</span>
             </div>
-            <nav className={styles.nav}>
-                <a href="#" className={styles.active}>
-                    Home
-                </a>
-                <a href="#">Trending</a>
-                <a href="#">Create</a>
-                <a href="#">Categories</a>
-                <a href="#">Profile</a>
+            <nav className={styles.nav}> 
+                {navItens.map((navItem, home) => (
+                    <a
+                        key={navItem.id}
+                        href="#"
+                        // Adiciona a classe 'active' ao primeiro item do array de navegação (home === 0)
+                        className={home === 0 ? styles.active : undefined}
+                    >
+                        {navItem.title}
+                    </a>
+                ))}
             </nav>
 
             <div className={styles.userActions}>

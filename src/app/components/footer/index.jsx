@@ -1,11 +1,11 @@
 import styles from "./footer.module.css";
 
-const Footer = () => {
+const Footer = ({logo, navItens}) => {
     return (
         <footer className={styles.footer}>
             <div className={styles.footerTop}>
                 <div className={styles.footerLogo}>
-                    <h2>MemeVerse</h2>
+                    <h2>{logo[0].title}</h2>
                     <p>O universo dos melhores memes da internet.</p>
                 </div>
 
@@ -13,11 +13,13 @@ const Footer = () => {
                     <div className={styles.footerNavSection}>
                         <h3>Navegação</h3>
                         <nav className={styles.footerNav}>
-                            <a href="#">Home</a>
-                            <a href="#">Trending</a>
-                            <a href="#">Create</a>
-                            <a href="#">Categories</a>
-                            <a href="#">Profile</a>
+                            {navItens.map((navItem) => (
+                                <a
+                                    key={navItem.id}
+                                >
+                                    {navItem.title}
+                                </a>
+                            ))}
                         </nav>
                     </div>
 
